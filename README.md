@@ -8,7 +8,6 @@ regularisation on CIFAR-10.
 | File | Purpose |
 |---|---|
 | `self_pruning_network.py` | Complete solution — run this |
-| `REPORT.md` | Written analysis |
 | `requirements.txt` | Dependencies |
 | `gate_distribution.png` | Generated after training |
 
