@@ -17,23 +17,3 @@ regularisation on CIFAR-10.
 pip install -r requirements.txt
 python self_pruning_network.py
 ```
-
-## How it works
-```
-Normal:   output = W × x
-Prunable: gates  = sigmoid(gate_scores)     ← learned, in (0,1)
-          output = (W × gates) × x
-
-gate → 0  =  weight pruned
-gate → 1  =  weight kept
-
-Loss = CrossEntropy + λ × Σ(gates)
-```
-
-## Results
-| Lambda | Accuracy | Sparsity |
-|---|---|---|
-| 0.0001 (Low) | ~54–58% | ~15–30% |
-| 0.0010 (Mid) | ~50–54% | ~35–55% |
-| 0.0100 (High)| ~44–50% | ~60–80% |
-
